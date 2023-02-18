@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Ultra
+    network: mumbai
+    source:
+      address: "0x36c4E4f98D82944515D87b0aad0CD263588039d8"
+      abi: Ultra
+      startBlock: 32174322
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - NewGame
+      abis:
+        - name: Ultra
+          file: ./abis/Ultra.json
+      eventHandlers:
+        - event: NewGame(indexed uint256,indexed address,indexed string,string,string,string,string)
+          handler: handleNewGame
+      file: ./src/ultra.ts

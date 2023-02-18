@@ -1,0 +1,13 @@
+type NewGame @entity(immutable: true) {
+  id: Bytes!
+  id_: BigInt! # uint256
+  game_: Bytes! # address
+  name_: String! # string
+  background1_: String! # string
+  emoji1_: String! # string
+  background2_: String! # string
+  emoji2_: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
