@@ -7,7 +7,7 @@ export function handleNewGame(event: NewGameEvent): void {
   );
   entity.num_ = event.params.id_;
   entity.game_ = event.params.game_;
-  entity.name_ = event.params.name_.toString();
+  entity.name_ = event.params.name_;
   entity.background1_ = event.params.background1_;
   entity.emoji1_ = event.params.emoji1_;
   entity.background2_ = event.params.background2_;

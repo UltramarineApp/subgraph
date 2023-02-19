@@ -2,7 +2,7 @@ type NewGame @entity(immutable: true) {
   id: Bytes!
   num_: BigInt! # uint256
   game_: Bytes! # address
-  name_: String! # string
+  name_: Bytes! # string
   background1_: String! # string
   emoji1_: String! # string
   background2_: String! # string

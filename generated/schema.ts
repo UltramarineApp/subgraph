@@ -60,13 +60,13 @@ export class NewGame extends Entity {
     this.set("game_", Value.fromBytes(value));
   }
 
-  get name_(): string {
+  get name_(): Bytes {
     let value = this.get("name_");
-    return value!.toString();
+    return value!.toBytes();
   }
 
-  set name_(value: string) {
-    this.set("name_", Value.fromString(value));
+  set name_(value: Bytes) {
+    this.set("name_", Value.fromBytes(value));
   }
 
   get background1_(): string {
